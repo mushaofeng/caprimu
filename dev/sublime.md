@@ -31,3 +31,14 @@
 ]
 ```
 ##常用插件
+
+###EMMET插件自定义模块
+```html
+"csscaret":"position: absolute;\ntop: 14px;\nleft: 20px;\nborder-style: dashed dashed solid;\nborder-color: transparent transparent #f00;\nborder-width: 14px 15px;\nheight: 0;\nwidth: 0;\nfont-size: 0;",
+"cssci":"color: #ff6600;",
+"csspa":"position: absolute;\t\nleft: |;\t\ntop:;",
+"csslips":"\twidth: px;\n\toverflow: hidden;\n\twhite-space: nowrap;\n\ttext-overflow: ellipsis;",
+"cssfilter":"\tfilter:alpha(opacity=50);\n\topacity:0.5;",
+"cssbg":"position: absolute;\nleft: 0;\ntop: 0;\nwidth: 100%;\nheight: 100%;\nfilter:alpha(opacity=30);\nopacity:0.3;\nbackground: #000;",
+"cssbtn":"\ndisplay: inline-block;\nwidth: 70px;\nheight: px;\nline-height: px;\nborder-radius: px;\nbackground: ;\ncolor: #FFF;\ntext-decoration: none;"
+```
