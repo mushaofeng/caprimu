@@ -33,7 +33,7 @@
 ##常用插件
 
 ###[EMMET插件自定义模块](/dev/src/snippets.json)
-```html
+```CSS
 "csscaret":"position: absolute;\ntop: 14px;\nleft: 20px;\nborder-style: dashed dashed solid;\nborder-color: transparent transparent #f00;\nborder-width: 14px 15px;\nheight: 0;\nwidth: 0;\nfont-size: 0;",
 "cssci":"color: #ff6600;",
 "csspa":"position: absolute;\t\nleft: |;\t\ntop:;",
