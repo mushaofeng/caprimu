@@ -21,7 +21,7 @@
 * 项目目录增加配置文件 `package.json` 和 `Gruntfile.js`
 	Gruntfile.js:注意G的大写，这个文件就是grunt的配置了，其中详细定义了每个任务的细节和执行任务的顺序等。
 * 安装grunt `npm install grunt --save-dev`
-	![结果](/img/grunt.png)
+	[结果](/img/grunt.png)
 * 配置任务Gruntfile.js 
 	```
 	module.exports = function(grunt) {
