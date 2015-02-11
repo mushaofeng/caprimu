@@ -32,7 +32,7 @@
 ```
 ##常用插件
 
-###[EMMET]()
+###[EMMET](http://docs.emmet.io/)
 
 ####[EMMET插件自定义模块](/dev/src/snippets.json)
 ```CSS
