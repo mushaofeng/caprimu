@@ -32,7 +32,9 @@
 ```
 ##常用插件
 
-###[EMMET插件自定义模块](/dev/src/snippets.json)
+###[EMMET]()
+
+####[EMMET插件自定义模块](/dev/src/snippets.json)
 ```CSS
 "csscaret":"position: absolute;\ntop: 14px;\nleft: 20px;\nborder-style: dashed dashed solid;\nborder-color: transparent transparent #f00;\nborder-width: 14px 15px;\nheight: 0;\nwidth: 0;\nfont-size: 0;",
 "cssci":"color: #ff6600;",
@@ -41,4 +43,24 @@
 "cssfilter":"\tfilter:alpha(opacity=50);\n\topacity:0.5;",
 "cssbg":"position: absolute;\nleft: 0;\ntop: 0;\nwidth: 100%;\nheight: 100%;\nfilter:alpha(opacity=30);\nopacity:0.3;\nbackground: #000;",
 "cssbtn":"\ndisplay: inline-block;\nwidth: 70px;\nheight: px;\nline-height: px;\nborder-radius: px;\nbackground: ;\ncolor: #FFF;\ntext-decoration: none;"
+```
+#### 常用模板
+```
+"pos:s": "position:static;",
+"pos:a": "position:absolute;",
+"pos:r": "position:relative;",
+"fl:l": "float:left;",
+"fl:r": "float:right;",
+"d:n": "display:none;",
+"d:b": "display:block;",
+"d:f": "display:flex;",
+"d:i": "display:inline;",
+"d:ib": "display:inline-block;",
+"ov:h": "overflow:hidden;",
+"bd+": "border:${1:1px} ${2:solid} ${3:#000};",
+"bdr+": "border-right:${1:1px} ${2:solid} ${3:#000};",
+"bg+": "background:${1:#fff} url(${2}) ${3:0} ${4:0} ${5:no-repeat};",
+"bg:ie": "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${1:x}.png',sizingMethod='${2:crop}');",
+"bgc": "background-color:#${1:fff};”,
+"op+": "opacity: $1;\nfilter: alpha(opacity=$2);",
 ```
