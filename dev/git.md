@@ -24,5 +24,5 @@
 
 	`git push origin master --force` or  `git push origin +master	`
 
-##git脚本 	[git.sh](/src/git.sh) [td-git.sh](/src/td-git.sh)
-	`chomd +x git.sh`
+##git脚本 	[git.sh](src/git.sh) [td-git.sh](src/td-git.sh)
+	`chomd +x git.sh` -> `./git.sh`
