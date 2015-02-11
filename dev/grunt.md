@@ -3,6 +3,7 @@
 
 ##关键词
 [任务插件](http://gruntjs.com/plugins)`transport`  目标`dialog`
+
 	```
 	transport: {
 	    dialog: {
@@ -23,6 +24,7 @@
 * 安装grunt `npm install grunt --save-dev`
 	[结果](/img/grunt.png)
 * 配置任务Gruntfile.js 
+
 	```
 	module.exports = function(grunt) {
 	  grunt.initConfig({
