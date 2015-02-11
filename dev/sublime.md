@@ -64,3 +64,4 @@
 "bgc": "background-color:#${1:fff};”,
 "op+": "opacity: $1;\nfilter: alpha(opacity=$2);",
 ```
+`st` `sc`
