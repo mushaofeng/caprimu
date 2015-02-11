@@ -17,8 +17,12 @@
 3. 分支修改过的文件
 
 	`git diff master --name-only `
+
 4. “强制”的将改动推到远程：
 
 	`git reset --hard 34eqfds`
 
 	`git push origin master --force` or  `git push origin +master	`
+
+##git脚本 	[git.sh](/src/git.sh) [td-git.sh](/src/td-git.sh)
+	`chomd +x git.sh`
