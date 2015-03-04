@@ -23,6 +23,21 @@
 	`git reset --hard 34eqfds`
 
 	`git push origin master --force` or  `git push origin +master	`
+5. 不小心在develop上进行开发时解决方案
+
+	```
+	# 未提交时
+	git stash
+	git checkout [BRANCH_NAME]
+	git stash pop
+
+	# 已提交时
+	git log -1 # 记住COMMIT ID
+	git reset --hard origin/develop
+	git checkout [BRANCH_NAME]
+	git cherry-pick [COMMIT_ID]
+	```
+
 
 ##git脚本 	[git.sh](src/git.sh) [td-git.sh](src/td-git.sh)
 	`chomd +x git.sh` -> `./git.sh`
