@@ -30,7 +30,12 @@
 	{ "keys": ["ctrl+shift+["], "command": "compact_expand_css", "args": { "action": "compact" } }		
 ]
 ```
+
+##常见问题
+[中文乱码](http://www.fuzhaopeng.com/2012/sublime-text-2-with-gb2312-gbk-support/)
 ##常用插件
+
+###GBK Encoding Support
 
 ###[EMMET](http://docs.emmet.io/)
 
@@ -65,3 +70,5 @@
 "op+": "opacity: $1;\nfilter: alpha(opacity=$2);",
 ```
 `st` `sc`
+
+
