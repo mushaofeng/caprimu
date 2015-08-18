@@ -1,6 +1,9 @@
 #LINUX
 ##常用命令
+npm升级
+ sudo npm -g install npm@2.9.1
 * grep命令
+
 	`grep [-acinv] [--color=auto] '查找字符串' filename `  `ls -l | grep -i file `
 	```
 	-a ：将binary文件以text文件的方式查找数据 
@@ -22,3 +25,10 @@
 	mkcd Project/a/src
 	mkdir -p Project/{a,b,c,d}/src
 * weget 
+
+tar zxvf webbench-1.5.tar.gz
+
+## CentOS
+*  包管理工具(yum)
+rpm -q centos-release
+[nodejs安装](http://blog.csdn.net/simplty/article/details/38434247)

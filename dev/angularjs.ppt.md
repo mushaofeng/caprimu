@@ -132,10 +132,6 @@ Directive允许你以声明的方式扩展HTML的标签。
 [Injector Demo](./Injector.html)
 
 --
-## TODO
-
-封装好的AJAX用于$http服务，使用$q作为promise服务，用ng-show,ng-hide,ng-class和ng-if作为模板控制语句
---
 
 ##优点
 
