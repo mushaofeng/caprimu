@@ -8,7 +8,11 @@ theme: sudodoki/reveal-cleaver-theme
 --
 ## Learn Once, Write Anywhere
 
-
+##定义 
+props DOM属性值 
+refs  获取真实DOM结点
+state
+getInitialState 方法用于定义初始状态，也就是一个对象，这个对象可以通过 this.state 属性读取。当用户点击组件，导致状态变化，this.setState 方法就修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件
 --
 
 ##概念
@@ -16,15 +20,22 @@ theme: sudodoki/reveal-cleaver-theme
 [getInitialState方法用于定义初始状态](http://msf.tudou.com/react/react-demos/demo07/)
 * this.setState({liked: !this.state.liked})
 * this.state.liked
-### props与state 的区别
+### props与state refs 的区别
 
 * this.props 和 this.state 都用于描述组件的特性，可能会产生混淆。
   this.props 表示那些一旦定义，就不再改变的特性，而 this.state 是会随着用户互动而产生变化的特性。
+
+##组件
+
+
 
 --
 ##React Canvas
 
 是Flipboard出品的一套前端框架，所有的界面元素都通过Canvas来绘制，infoQ之前也有文章对其进行了介绍。Flipboard追求极致的性能和用户体验，因此对浏览器的缓慢DOM操作深恶痛绝，不惜大刀阔斧彻底舍弃了DOM，而完全用Canvas实现了整套UI控件。
+
+
+## JSFiddle
 
 --
 ## ref
@@ -36,8 +47,8 @@ theme: sudodoki/reveal-cleaver-theme
 	1. Mounting：已插入真实 DOM
 	2. Updating：正在被重新渲染
 	3. Unmounting：已移出真实 DOM
-
-
+*组件并不是真实的 DOM 节点，而是存在于内存之中的一种数据结构，叫做虚拟 DOM （virtual DOM）
+this.refs.[refName] 属性获取的是真实 DOM ，所以必须等到虚拟 DOM 插入文档以后，才能使用这个属性，否则会报错。
 --
 ##Flux
 Flux是一个系统架构，用于推进应用中的数据单向流动。
@@ -63,7 +74,7 @@ React是一个JavaScript框架，用于构建“可预期的”和“声明式�
 [react-demos](https://github.com/ruanyf/react-demos)
 [Examples](https://github.com/facebook/react/wiki/Examples)
 [TodoMVC](http://facebook.github.io/flux/docs/todo-list.html)
-
+[深入理解JavaScript的React框架的原理](http://www.jb51.net/article/68808.htm)
 [flux  入门](http://www.oschina.net/question/1397765_236546)
 参考资料
 

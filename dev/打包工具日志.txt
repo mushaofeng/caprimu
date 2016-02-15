@@ -1,0 +1,259 @@
+开始更新代码 ...
+git branch develop origin/develop
+git checkout develop
+Already on 'develop'
+Your branch and 'origin/master' have diverged,
+and have 163 and 12 different commits each, respectively.
+(use "git pull" to merge the remote branch into yours)
+git reset --hard origin/develop
+git pull origin develop
+From git.intra.tudou.com:static/youku
+* branch develop -> FETCH_HEAD
+5f3aeb5..338448a develop -> origin/develop
+Updating 5f3aeb5..338448a
+Fast-forward
+build/css/find/external/ykheader.css | 53 +-
+build/css/find/g.css | 143 +-
+build/css/find/index.css | 12 +-
+build/css/find/main.css | 29 +-
+build/css/find/record.css | 17 +-
+build/css/find/submanage.css | 18 +-
+build/css/find/subscription.css | 136 +-
+build/css/live/address.css | 1030 +++
+build/css/live/index.css | 29 +-
+build/css/live/live.css | 225 +-
+build/css/live/liveplayer.css | 59 +-
+build/css/live/vku.css | 14 +-
+build/css/mobile/live/pay.css | 92 +-
+build/css/mobile/live/play.css | 4 +
+build/embed/citymin.json | 1 +
+build/img/find/g_36d4d09.png | Bin 0 -> 20407 bytes
+build/img/find/main_c851d5c.png | Bin 749 -> 2462 bytes
+build/img/find/userlevel_3add08f.png | Bin 0 -> 2987 bytes
+build/img/live/def_location_0f16c83.png | Bin 0 -> 296 bytes
+build/img/live/icon_7b1e580.png | Bin 0 -> 2479 bytes
+build/img/live/loading_010044c.png | Bin 0 -> 2532 bytes
+build/img/live/location_7ffaf2d.png | Bin 0 -> 288 bytes
+build/img/live/picchar_b0914a3.png | Bin 6818 -> 8268 bytes
+build/img/live/prehot_bg_4d5a5ce.jpg | Bin 3636 -> 4481 bytes
+build/img/live/prehot_bottombg_7b7710a.png | Bin 203 -> 289 bytes
+build/img/live/prehot_clock_36862a7.png | Bin 1129 -> 1206 bytes
+build/img/live/prehot_phonebg_79484dd.png | Bin 477 -> 1573 bytes
+build/img/live/prehot_ticketbg_52b2b89.png | Bin 586 -> 2085 bytes
+build/img/live/prehot_titlebg_f138bb3.png | Bin 10785 -> 12463 bytes
+build/img/live/prehot_topbar_29c6466.png | Bin 218 -> 338 bytes
+build/img/live/productTips_b6633c9.png | Bin 0 -> 2198 bytes
+build/img/live/ticket_s_e60febe.png | Bin 6636 -> 7910 bytes
+build/img/mobile/live/v_1ff2047.png | Bin 18361 -> 23302 bytes
+build/js/page/find/g.js | 7417 ++++----------------
+build/js/page/find/index/index.js | 1400 ++++
+build/js/page/find/main/index.js | 25 +-
+build/js/page/find/record/index.js | 1394 ++++
+build/js/page/find/subscription/manage.js | 1394 ++++
+build/js/page/find/subscription/subscription.js | 1444 +++-
+build/js/page/live/address/main.js | 4526 ++++++++++++
+build/js/page/live/address/view/citymin.js | 19 +
+build/js/page/live/index/index.js | 28 +-
+build/js/page/live/play/main.js | 874 ++-
+build/js/page/live/vku/main.js | 28 +-
+dist/css/live/index.css | 2 +-
+dist/css/live/live.css | 2 +-
+dist/css/mobile/live/play.css | 6 +-
+dist/js/page/live/index/index.js | 4 +-
+dist/js/page/live/play/main.js | 10 +-
+dist/js/page/live/player/liveplayer.js | 4 +-
+dist/js/page/mobile/live/play/main.js | 8 +
+src/css/find/c_layout.less | 6 +-
+src/css/find/c_pack.less | 109 +-
+src/css/find/common.less | 20 +-
+src/css/find/header.less | 3 +
+src/css/find/index.less | 3 +
+src/css/find/main.less | 31 +-
+src/css/find/submanage.less | 7 +-
+src/css/find/subscription.less | 50 +-
+src/css/live/address.less | 301 +
+src/css/live/live.less | 183 +-
+src/embed/citymin.js | 1 +
+src/img/find/g.png | Bin 21375 -> 20407 bytes
+src/img/find/g.psd | Bin 9802520 -> 9868910 bytes
+src/img/find/userlevel.png | Bin 0 -> 2987 bytes
+src/img/find/userlevel.psd | Bin 0 -> 10594901 bytes
+src/img/live/address_cur.png | Bin 0 -> 540 bytes
+src/img/live/def_location.png | Bin 0 -> 447 bytes
+src/img/live/icon.png | Bin 0 -> 3583 bytes
+src/img/live/loading.png | Bin 0 -> 2836 bytes
+src/img/live/location.png | Bin 0 -> 419 bytes
+src/img/live/productTips.png | Bin 0 -> 2659 bytes
+src/js/page/find/main/fixmod.js | 5 +
+src/js/page/find/main/switchtab.js | 3 +-
+src/js/page/find/subscription/model.js | 1 +
+src/js/page/find/subscription/view/pageview.js | 41 +
+.../find/subscription/view/tpl/recommendation.tpl | 3 +-
+.../find/subscription/view/tpl/subscription.tpl | 32 +-
+.../find/subscription/view/tpl/user-channel.tpl | 30 +-
+src/js/page/live/address/main.js | 15 +
+src/js/page/live/address/model/data.js | 93 +
+src/js/page/live/address/view/add.js | 154 +
+src/js/page/live/address/view/citymin.js | 1 +
+src/js/page/live/address/view/cityselect.js | 149 +
+src/js/page/live/address/view/list.js | 192 +
+src/js/page/live/address/view/tpl/add.tpl | 45 +
+src/js/page/live/address/view/tpl/confirm.tpl | 35 +
+src/js/page/live/address/view/tpl/list.tpl | 34 +
+src/js/page/live/address/view/tpl/loading.tpl | 5 +
+src/js/page/live/play/main.js | 2 +-
+src/js/page/live/play/view/appview.js | 3 +-
+src/js/page/live/play/view/danmupool.js | 208 +
+src/js/page/live/play/view/goods.js | 270 +-
+src/js/page/live/play/view/prehot.js | 4 +-
+src/js/page/live/play/view/rproducts.js | 26 +-
+src/js/page/live/play/view/tpl/danmupool.tpl | 8 +
+src/js/page/live/play/view/tpl/mainproduct.tpl | 40 +-
+src/js/page/live/play/view/tpl/playerright.tpl | 33 +-
+src/js/page/live/play/view/vinfo.js | 261 +-
+src/js/page/live/remind.js | 15 +-
+src/js/tui/slide2.js | 17 +-
+tpm-config.js | 3 +
+102 files changed, 15730 insertions(+), 7159 deletions(-)
+create mode 100644 build/css/live/address.css
+create mode 100644 build/embed/citymin.json
+create mode 100644 build/img/find/g_36d4d09.png
+create mode 100644 build/img/find/userlevel_3add08f.png
+create mode 100644 build/img/live/def_location_0f16c83.png
+create mode 100644 build/img/live/icon_7b1e580.png
+create mode 100644 build/img/live/loading_010044c.png
+create mode 100644 build/img/live/location_7ffaf2d.png
+create mode 100644 build/img/live/productTips_b6633c9.png
+create mode 100644 build/js/page/live/address/main.js
+create mode 100644 build/js/page/live/address/view/citymin.js
+create mode 100644 dist/js/page/mobile/live/play/main.js
+create mode 100644 src/css/live/address.less
+create mode 100644 src/embed/citymin.js
+create mode 100644 src/img/find/userlevel.png
+create mode 100644 src/img/find/userlevel.psd
+create mode 100644 src/img/live/address_cur.png
+create mode 100644 src/img/live/def_location.png
+create mode 100644 src/img/live/icon.png
+create mode 100644 src/img/live/loading.png
+create mode 100644 src/img/live/location.png
+create mode 100644 src/img/live/productTips.png
+create mode 100644 src/js/page/live/address/main.js
+create mode 100644 src/js/page/live/address/model/data.js
+create mode 100644 src/js/page/live/address/view/add.js
+create mode 100644 src/js/page/live/address/view/citymin.js
+create mode 100644 src/js/page/live/ad
+dress/view/cityselect.js
+create mode 100644 src/js/page/live/address/view/list.js
+create mode 100644 src/js/page/live/address/view/tpl/add.tpl
+create mode 100644 src/js/page/live/address/view/tpl/confirm.tpl
+create mode 100644 src/js/page/live/address/view/tpl/list.tpl
+create mode 100644 src/js/page/live/address/view/tpl/loading.tpl
+create mode 100644 src/js/page/live/play/view/danmupool.js
+create mode 100644 src/js/page/live/play/view/tpl/danmupool.tpl
+开始提取要发布的文件 ...
+复制文件 ...
+git log -1 --pretty="%H %an" "build/js/g.js"
+git log -1 --pretty="%H %an" "build/js/page/find/external/ykheader.js"
+git log -1 --pretty="%H %an" "build/js/page/find/g.js"
+git log -1 --pretty="%H %an" "build/js/page/find/index/index.js"
+git log -1 --pretty="%H %an" "build/js/page/find/main/index.js"
+git log -1 --pretty="%H %an" "build/js/page/find/record/index.js"
+git log -1 --pretty="%H %an" "build/js/page/find/subscription/manage.js"
+git log -1 --pretty="%H %an" "build/js/page/find/subscription/subscription.js"
+git log -1 --pretty="%H %an" "build/css/find/external/ykheader.css"
+git log -1 --pretty="%H %an" "build/css/find/g.css"
+git log -1 --pretty="%H %an" "build/css/find/index.css"
+git log -1 --pretty="%H %an" "build/css/find/main.css"
+git log -1 --pretty="%H %an" "build/css/find/record.css"
+git log -1 --pretty="%H %an" "build/css/find/submanage.css"
+git log -1 --pretty="%H %an" "build/css/find/subscription.css"
+请求URL: http://10.5.111.2:8090/wwwtest/
+请求URL: http://csstest.tudouui.com/youku/dist/js/g.js [200]
+[对比头部版本] dist/js/g.js，本地：08e4c45，服务器：08e4c45
+请求URL: http://csstest.tudouui.com/youku/dist/js/page/find/external/ykheader.js [200]
+[对比头部版本] dist/js/page/find/external/ykheader.js，本地：8281936，服务器：8281936
+请求URL: http://csstest.tudouui.com/youku/dist/js/page/find/g.js [200]
+[对比头部版本] dist/js/page/find/g.js，本地：e71785b，服务器：8281936
+文件不一致：dist/js/page/find/g.js
+请求URL: http://csstest.tudouui.com/youku/dist/js/page/find/index/index.js [200]
+[对比头部版本] dist/js/page/find/index/index.js，本地：e71785b，服务器：eb6dd5d
+文件不一致：dist/js/page/find/index/index.js
+请求URL: http://csstest.tudouui.com/youku/dist/js/page/find/main/index.js [200]
+[对比头部版本] dist/js/page/find/main/index.js，本地：338448a，服务器：29109f4
+文件不一致：dist/js/page/find/main/index.js
+请求URL: http://csstest.tudouui.com/youku/dist/js/page/find/record/index.js [200]
+[对比头部版本] dist/js/page/find/record/index.js，本地：e71785b，服务器：eb6dd5d
+文件不一致：dist/js/page/find/record/index.js
+请求URL: http://csstest.tudouui.com/youku/dist/js/page/find/subscription/manage.js [200]
+[对比头部版本] dist/js/page/find/subscription/manage.js，本地：e71785b，服务器：e71785b
+请求URL: http://csstest.tudouui.com/youku/dist/js/page/find/subscription/subscription.js [200]
+[对比头部版本] dist/js/page/find/subscription/subscription.js，本地：0415b77，服务器：0415b77
+请求URL: http://csstest.tudouui.com/youku/dist/css/find/external/ykheader.css [200]
+[对比头部版本] dist/css/find/external/ykheader.css，本地：e71785b，服务器：8281936
+文件不一致：dist/css/find/external/ykheader.css
+请求URL: http://csstest.tudouui.com/youku/dist/css/find/g.css [200]
+[对比头部版本] dist/css/find/g.css，本地：3df9a52，服务器：3df9a52
+请求URL: http://csstest.tudouui.com/youku/dist/css/find/index.css [200]
+[对比头部版本] dist/css/find/index.css，本地：3816378，服务器：8281936
+文件不一致：dist/css/find/index.css
+请求URL: http://csstest.tudouui.com/youku/dist/css/find/main.css [200]
+[对比头部版本] dist/css/find/main.css，本地：3df9a52，服务器：3df9a52
+请求URL: http://csstest.tudouui.com/youku/dist/css/find/record.css [200]
+[对比头部版本] dist/css/find/record.css，本地：e71785b，服务器：8281936
+文件不一致：dist/css/find/record.css
+请求URL: http://csstest.tudouui.com/youku/dist/css/find/submanage.css [200]
+[对比头部版本] dist/css/find/submanage.css，本地：e71785b，服务器：e71785b
+请求URL: http://csstest.tudouui.com/youku/dist/css/find/subscription.css [200]
+[对比头部版本] dist/css/find/subscription.css，本地：346cd02，服务器：346cd02
+请求URL: http://csstest.tudouui.com/youku/dist/img/find/pack_hover_play_0a4da1c.png [200]
+请求URL: http://csstest.tudouui.com/youku/dist/embed/fonts/tuiicon_048e465.ttf [200]
+请求URL: http://csstest.tudouui.com/youku/dist/embed/fonts/tuiicon_059212f.eot [200]
+请求URL: http://csstest.tudouui.com/youku/dist/embed/fonts/tuiicon_15a091e.woff [200]
+请求URL: http://csstest.tudouui.com/youku/dist/embed/fonts/tuiicon_29877c1.svg [200]
+开始上传文件 ...
+[FTP] 连接服务器: 10.25.252.101
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/g.js -> /UPLOAD/youku/dist/js/page/find/g.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/g.js -> /dispatch/youku/dist/js/page/find/g.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/index/index.js -> /UPLOAD/youku/dist/js/page/find/index/index.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/index/index.js -> /dispatch/youku/dist/js/page/find/index/index.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/main/index.js -> /UPLOAD/youku/dist/js/page/find/main/index.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/main/index.js -> /dispatch/youku/dist/js/page/find/main/index.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/record/index.js -> /UPLOAD/youku/dist/js/page/find/record/index.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/js/page/find/record/index.js -> /dispatch/youku/dist/js/page/find/record/index.js
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/css/find/external/ykheader.css -> /UPLOAD/youku/dist/css/find/external/ykheader.css
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/css/find/external/ykheader.css -> /dispatch/youku/dist/css/find/external/ykheader.css
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/css/find/index.css -> /UPLOAD/youku/dist/css/find/index.css
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/css/find/index.css -> /dispatch/youku/dist/css/find/index.css
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/css/find/record.css -> /UPLOAD/youku/dist/css/find/record.css
+[FTP] 上传文件: /Applications/youku.app/Contents/Frameworks/node-webkit Helper.app/Contents/MacOS/temp/files/youku/dist/css/find/record.css -> /dispatch/youku/dist/css/find/record.css
+开始版本化 ...
+[SSH] 连接服务器: 10.25.252.101
+[SSH] /usr/bin/python /home/controlcenter/uiversioning/test/updatever.py wwwtest
+CREATE: FILE /home/distribute/uitest.tudou.com/dispatch/youku/dist/css/find/external/ykheader_6.css
+CREATE: FILE /home/distribute/uitest.tudou.com/dispatch/youku/dist/css/find/index_11.css
+CREATE: FILE /home/distribute/uitest.tudou.com/dispatch/youku/dist/css/find/record_8.css
+CREATE: FILE /home/distribute/uitest.tudou.com/dispatch/youku/dist/js/page/find/g_8.js
+CREATE: FILE /home/distribute/uitest.tudou.com/dispatch/youku/dist/js/page/find/index/index_13.js
+CREATE: FILE /home/distribute/uitest.tudou.com/dispatch/youku/dist/js/page/find/main/index_6.js
+CREATE: FILE /home/distribute/uitest.tudou.com/dispatch/youku/dist/js/page/find/record/index_7.js
+output files:
+/youku/dist/js/page/find/main/index.js=/youku/dist/js/page/find/main/index_6.js
+/youku/dist/js/page/find/index/index.js=/youku/dist/js/page/find/index/index_13.js
+/youku/dist/css/find/record.css=/youku/dist/css/find/record_8.css
+/youku/dist/js/page/find/g.js=/youku/dist/js/page/find/g_8.js
+/youku/dist/js/page/find/record/index.js=/youku/dist/js/page/find/record/index_7.js
+/youku/dist/css/find/external/ykheader.css=/youku/dist/css/find/external/ykheader_6.css
+/youku/dist/css/find/index.css=/youku/dist/css/find/index_11.css
+
+output files:
+/youku/dist/js/page/find/main/index.js=/youku/dist/js/page/find/main/index_6.js
+/youku/dist/js/page/find/index/index.js=/youku/dist/js/page/find/index/index_13.js
+/youku/dist/css/find/record.css=/youku/dist/css/find/record_8.css
+/youku/dist/js/page/find/g.js=/youku/dist/js/page/find/g_8.js
+/youku/dist/js/page/find/record/index.js=/youku/dist/js/page/find/record/index_7.js
+/youku/dist/css/find/external/ykheader.css=/youku/dist/css/find/external/ykheader_6.css
+/youku/dist/css/find/index.css=/youku/dist/css/find/index_11.css
+
+Time spend 5.727 s
+[SSH] 版本化成功
+发布成功

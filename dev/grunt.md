@@ -31,6 +31,9 @@
 
 	`grunt build`	
 
+##不同系统下换行符的处理
+	grunt.util.normalizelf(options.separator)
+
 ##关键词
 [任务插件](http://gruntjs.com/plugins)`transport`  目标`dialog`
 

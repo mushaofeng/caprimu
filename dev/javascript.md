@@ -18,3 +18,5 @@ function isObject(value) {
     if (isString(attr = element.attr(attr))) {
       return attr;
     }
+
+4 [requireJs](http://www.myexception.cn/javascript/1893484.html)

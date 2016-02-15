@@ -37,6 +37,10 @@
 	git checkout [BRANCH_NAME]
 	git cherry-pick [COMMIT_ID]
 	```
+6. diff 
+git diff  3a50ab1f da1bc0169  filePath 
+
+ git diff HEAD -- src/css/find/c_pack.less
 ## Alias
 	ca = commit --amend
 	ci = commit -a -v
@@ -53,6 +57,15 @@
 
 
 
+7.git conflict
+
+	git add src/js/page/find/main/recommend.js
+
+	git rebase --continue 
+
+8.
+git reset --hard 5787a749b8c
+git ps -f  origin develop	
 ##git脚本 	[git.sh](src/git.sh) [td-git.sh](src/td-git.sh)
 	`chomd +x git.sh` -> `./git.sh`
 

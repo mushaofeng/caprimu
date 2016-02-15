@@ -7,8 +7,19 @@
 1.npm -v
 2. sudo npm install -g --unsafe-perm yo
 3. npm root -g   /查看模块安装位置
+npm install grunt --registry=http://registry.npm.taobao.org
 
 
+安装本地/全局依赖包， npm install <package-name>  /  npm install -g <package-name> （这样会下载安装最新的包，若下载安装特定版本号的包则 npm install <package-name>@<version> ）
+
+卸载本地/全局依赖包， npm uninstall <package-name> / npm uninstall -g <package-name> 
+
+更新本地/全局依赖包， npm update <package-name> / npm update -g <package-name> 
+
+
+
+
+[常用命令](http://www.cnblogs.com/fsjohnhuang/p/4178019.html) 
 
 
 ##module目录

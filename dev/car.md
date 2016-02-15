@@ -15,10 +15,11 @@ gulp watch
 
 ##node
 
-
+[Node.js + Express + MongoDB教程](http://www.jdon.com/idea/nodejs/node-express-mongo.html)
 [nodejs 异步回调嵌套](http://blog.fens.me/nodejs-async/)
 [异步回调嵌套 EventProxy](http://kb.cnblogs.com/page/121539/)
 [后台开启node 服务\nodejs 多进程](https://cnodejs.org/topic/5021c2cff767cc9a51e684e3)
+[mongo学习文档](https://cnodejs.org/topic/504b4924e2b84515770103dd)
 
 ##mongo 版本
 /usr/local/etc/mongod.conf
@@ -42,3 +43,5 @@ gulp watch
 	},
 排序
 ["55c41a6424688785c30302f0","55c2ae10c3da4ee3be485115","55c41bcc24688785c30302f8","55c41c1f24688785c30302f9","55c72dbc9b7140c40bb34497","55c7308cc677e50c0f487734"]
+db.movies.update({id:1},{$set:{name:111}})
+
