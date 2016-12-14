@@ -40,6 +40,14 @@
 6. diff 
 git diff  3a50ab1f da1bc0169  filePath 
 
+# 删除 untracked files
+git clean -f
+ 
+# 连 untracked 的目录也一起删掉
+git clean -fd
+
+git fetch origin
+
  git diff HEAD -- src/css/find/c_pack.less
 ## Alias
 	ca = commit --amend

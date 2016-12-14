@@ -1,0 +1,189 @@
+#前端性能监控
+一套性能监控系统持续监控、评估、预警页面性能状况、发现瓶颈，指导优化工作的进行。
+
+##流程
+1.数据统计（真实环境的统计信息 vs 多点的定时监控）
+2.数据上报
+3.数据分析
+4.数据报警
+
+##监控统计
+
+类型	| 优点 |	缺点 | 示例
+---|--- |---|---
+非侵入式 | 指标齐全、客户端主动监测、竞品监控 |	无法知道性能影响用户数、采样少容易失真、无法监控复杂应用与细分功能 |	Pagespeed、PhantomJS、UAQ
+侵入式 |	真实海量用户数据、能监控复杂应用与业务功能、用户点击与区域渲染 |	需插入脚本统计、网络指标不全、无法监控竞品	|DP 、Google 统计
+
+##工具
+
+###Page Speed
+ 基于谷歌性能准则的检测
+[gtmetrix](https://gtmetrix.com/)
+
+
+###WebPagetest
+ 查看页面加载瀑布流等数据
+[阿里测](http://alibench.com/)
+
+
+### performance
+IE9和chrome6以上的版本都支持
+DNS查询耗时、TCP链接耗时、request请求耗时、解析dom树耗时、白屏时间、domready时间、onload时间
+```
+DNS查询耗时 ：domainLookupEnd - domainLookupStart
+TCP链接耗时 ：connectEnd - connectStart
+request请求耗时 ：responseEnd - responseStart
+解析dom树耗时 ： domComplete - domInteractive
+白屏时间 ：responseStart - navigationStart
+domready时间 ：domContentLoadedEventEnd - navigationStart
+onload时间 ：loadEventEnd - navigationStart
+```
+
+performance.getEntries()
+
+###PhantomJS
+
+PhantomJS是一个无界面的webkit内核浏览器.
+
+PhantomJS轻松地将监控带入了自动化的行列
+
+###JsPerf 
+
+JS 执行性能分析网站
+
+
+
+##监控指标
+四个关键指标，即白屏时间、首屏时间、用户可操作、总下载时间
+
+##利用监控数据解决问题
+
+
+##使用场景
+
+1.无需浏览器的Web测试
+
+2.页面自动化操作 
+
+3.屏幕捕获
+
+4.网络监控 
+
+
+##安装
+
+phantomJS -v
+
+
+##开发
+
+###webpage模块
+
+```
+var webPage = require("webpage"),
+    page = webPage.create();
+```
+
+###open
+
+打开一个url链接，并加载对应的页面，一旦页面加载完成，就会触发回调
+
+```
+var page = require("webpage").create;
+
+page.open("http://www.youku.com", function(status) {
+    if(status !== "success") {
+        console.log("open fail!");
+    }
+    phantom.exit();
+});
+```
+
+###evaluate
+
+```
+var page = require('webpage').create();
+
+page.open(url, function(status) {
+  var title = page.evaluate(function() {
+    return document.title;
+  });
+  console.log('Page title is ' + title);
+  phantom.exit();
+});
+```
+
+###includeJs
+
+可以使用includeJs()方法加载外部脚本
+
+
+
+
+##不能做什么
+PhantomJS是一个阉割版的webkit，不支持flash、webGL、video/audio、css 3-d，phontomjs不想背负操作系统强相关的特性，跨平台比较困难。
+
+
+/Users/msf/dev/phantomjs
+
+##日志采集发送
+
+###错误日志
+
+###performance
+[官网](http://phantomjs.org/)
+[API](http://phantomjs.org/api/)
+
+
+####webpage
+require('webpage').create();
+
+方法|
+---|---
+open | 
+onConsoleMessage |
+evaluate |
+##数据平台
+
+### yslow
+[git](https://github.com/marcelduran/yslow/tree/master/src)
+ phantomjs yslow.js --help
+
+
+##分析、报警平台
+
+
+
+##
+phantomjs
+
+{"navigation":{"type":0,"redirectCount":0},"timing":{"connectStart":1470184437991,"navigationStart":1470184437991,"secureConnectionStart":0,"fetchStart":1470184437991,"domContentLoadedEventStart":1470184438080,"responseStart":1470184437991,"domInteractive":1470184438080,"domainLookupEnd":1470184437991,"redirectStart":0,"requestStart":1470184437991,"unloadEventEnd":0,"unloadEventStart":0,"domComplete":1470184438080,"domainLookupStart":1470184437991,"loadEventStart":1470184438080,"domContentLoadedEventEnd":1470184438080,"redirectEnd":0,"connectEnd":1470184437991,"responseEnd":1470184438079,"domLoading":1470184438079,"loadEventEnd":1470184438080}}
+
+##yslow 
+[YSlow.js on Node.js](https://github.com/jmervine/node-yslowjs)
+require('fs').readFile('example.com.har',function(err, data) {varhar = JSON.parse(data),
+        YSLOW = require('yslow').YSLOW,
+        doc = require('jsdom').jsdom(),
+        res = YSLOW.harImporter.run(doc, har,'ydefault'),
+        content = YSLOW.util.getResults(res.context,'basic');
+
+    console.log(content);
+  });
+
+##错误调试
+
+
+##参考
+[wnm](http://git.intra.tudou.com/static/wnm_wangling/commits/master)
+[Web性能优化的完整资料汇总](http://my.oschina.net/sqzy/blog/478385?p=1)
+[基于phantomJS实现web性能监控](http://www.webryan.net/2013/02/web-page-test-based-on-phontomjs/)
+[7 天打造前端性能监控系统](http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/)
+
+##相关产品
+[前端监控系统](http://www.oneapm.com/bi/feature.html)
+[性能参数](https://segmentfault.com/a/1190000004010453)
+[前端代码异常日志收集与监控](http://www.cnblogs.com/hustskyking/p/fe-monitor.html)
+[tracker](http://ucren.com/tracker/docs/)
+[JSTracker：前端异常数据采集](http://taobaofed.org/blog/2015/10/28/jstracker-how-to-collect-data/)
+
+[京东前端：PhantomJS 和NodeJS在京东网站前端监控平台的最佳实践](http://mp.weixin.qq.com/s?__biz=MzIwNjQwMzUwMQ==&mid=2247484138&idx=1&sn=431702ee926dd3a92403bb58417d88d4&scene=1&srcid=0831UU5TBd1yrnF8uRzlCOr7&from=groupmessage&isappinstalled=0#wechat_redirect)

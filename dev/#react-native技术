@@ -1,0 +1,12 @@
+#react-native技术
+
+##热更新
+
+ code-push的发布比pushy早，从繁琐程度相比我觉得是不相上下吧。。都是通过命令行发布版本，通过JS代码自行控制更新，最麻烦的步骤都在于早期工程的配置和版本发布过程。
+
+pushy的优势在于针对react-native，做了高度的优化，实现了基于bsdiff的超小patch包，如果做一两行代码的hotfix，可以几乎做到完全不消耗用户流量；除此以外二者是比较接近的。CDN方面，pushy使用的是七牛，更适合国内网络，code-push使用的是微软azure云，对于全球化运营的应用更有优势。
+
+
+[携程 React Native 实践与性能优化](http://www.toutiao.com/a6350885318086656258/?tt_from=mobile_qq&utm_campaign=client_share&app=news_article_social&utm_source=mobile_qq&iid=4681762029&utm_medium=toutiao_ios)
+
+##[白屏优化](http://reactnative.cn/post/754)
